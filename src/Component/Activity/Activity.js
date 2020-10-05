@@ -35,14 +35,14 @@ const Activity = () => {
             <Card onClick={() => {
               setActivity(activity.activityName = active.name);
               setLoggedInUser(activity.activityName)
-            }} className={classes.root} style={{ float: 'left', width: '25%', margin: '30px', height: '50%' }}>
+            }} className={classes.root} style={{ float: 'left', width: '25%', margin: '30px', height: '100%' }}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
                   image={active.image}
                 />
-                <CardContent>
-                  <Link to={`/eventManager/${active.id}`}>
+                <CardContent  style={{backgroundColor:`#8e44ad`,color:'white'}}>
+                  <Link style={{textDecoration:"none",color:'white'}} to={`/eventManager/${active.id}`}>
                   <Typography gutterBottom variant="h5" component="h2">
                     {active.name} 
                   </Typography>

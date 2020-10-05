@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const Admin = () => {
     const [member,setMember] =useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/ManyVolunteers')
+        fetch('https://fast-wildwood-91936.herokuapp.com/ManyVolunteers')
         .then(res => res.json())
         .then(data=>{
             setMember(data)

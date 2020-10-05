@@ -45,12 +45,13 @@ firebase.initializeApp(firebaseConfig);
               <Container>
                 
                 <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' ,textAlign: 'center' }} > 
-                <img   style={{ height:'100px', width:'200px',margin:'50px'}} src={logo} alt=""/>
+                <img   style={{ height:'100px', width:'202.81px',margin:'50px'}} src={logo} alt=""/>
                 <div style={{backgroundColor:'white',margin:'0 auto',padding:'50px',width:'400px',borderRadius:"10px"}}>
                     <h1>Login With </h1>
-                    <div style={{border: '1px solid black',borderRadius: '50px',backgroundColor:'white',padding:'5px'}}><img src={googleLogo} alt="" style={{float:'left',width:'50px' ,height:'50px',padding:'15px'}}/>
+                    <div style={{width: "auto",height: "51px",background: "#FFFFFF",border: "1px solid #C7C7C7",
+boxSizing: "border-box",borderRadius: "57px"}}><img src={googleLogo} alt="" style={{float:'left',width:'50px' ,height:'50px',padding:'15px'}}/>
                     <h3 onClick={handleGoogleIn}>Continue with Google</h3></div>
-                    <h5>Don't have account <span> Create an account</span></h5>
+                    <h5>Don't have account? <span style={{color:'Blue'}}> Create an account</span></h5>
                 </div>
                 </Typography>
               </Container>

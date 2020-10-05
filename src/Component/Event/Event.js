@@ -35,7 +35,7 @@ const Event = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [volunteers, setVolunteers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/volunteer?email=' + loggedInUser.email)
+        fetch('https://fast-wildwood-91936.herokuapp.com/volunteer?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 setVolunteers(data)
@@ -47,7 +47,7 @@ const Event = () => {
   
     const  deleteEvent=(id)=> {
         
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://fast-wildwood-91936.herokuapp.com/delete/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -74,7 +74,7 @@ const Event = () => {
                                     {volunteer.name}
                                 </Typography>
                                 <Typography component="p">
-                                    {volunteer.selectedDate}
+                                    {(new Date(volunteer.selectedDate).toDateString("dd/MM/yyyy"))}
                                 </Typography>
                                 <Button onClick={()=>deleteEvent(volunteer._id)} variant="contained" color="primary"> Cancel</Button>
                             </CardContent>
