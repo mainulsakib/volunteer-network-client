@@ -44,17 +44,18 @@ const Event = () => {
             })
     }, [])
     console.log(volunteers)
-  
-    const  deleteEvent=(id)=> {
-        
-        fetch(`https://fast-wildwood-91936.herokuapp.com/delete/${id}`,{
+
+    const deleteEvent = (id) => {
+
+        fetch(`https://fast-wildwood-91936.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
-        .then(res => res.json())
-        .then(data => {
-            
-            console.log("deleted successfully")
-        })
+            .then(res => res.json())
+            .then(data => {
+                
+
+                console.log("deleted successfully")
+            })
         console.log(id)
     }
     return (
@@ -76,9 +77,9 @@ const Event = () => {
                                 <Typography component="p">
                                     {(new Date(volunteer.selectedDate).toDateString("dd/MM/yyyy"))}
                                 </Typography>
-                                <Button onClick={()=>deleteEvent(volunteer._id)} variant="contained" color="primary"> Cancel</Button>
+                                <Button onClick={() => deleteEvent(volunteer._id)} variant="contained" color="primary"> Cancel</Button>
                             </CardContent>
- 
+
                         </div>
                     </Card>
                 </div>)
