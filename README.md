@@ -4,10 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [visit website](https://volunteer-network-f56af.firebaseapp.com/)
 
-feature:
+## feature:
 This is  volunteers website where any volunteer can join volunteery activity by clicking on his desire project .There is an admin panel where any admin add any volunteery activity .Moreover volunteer can check his chosen  task 
 
-Technology:
+## Technology:
 1.React 
 2.React router 
 3.Firebase 
